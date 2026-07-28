@@ -182,6 +182,9 @@
   .features-grid{
     display:grid;grid-template-columns:repeat(4,1fr);gap:26px;text-align:center;
   }
+  .features-grid.cols-3{
+    grid-template-columns:repeat(3,1fr);max-width:920px;margin:0 auto;
+  }
   .feature{
     position:relative;overflow:hidden;
     background:#fff;padding:38px 24px 30px;border-radius:14px;
@@ -341,7 +344,10 @@
   /* ===== SERVICES PAGE ===== */
   .services-page{background:var(--off);padding:90px 0;}
   .services-page-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;text-align:center;
+    display:flex;flex-wrap:wrap;justify-content:center;gap:28px;text-align:center;
+  }
+  .services-page-grid .service-card-detail{
+    flex:1 1 300px;max-width:340px;
   }
   .service-card-detail{
     display:block;
@@ -366,6 +372,14 @@
     box-shadow:0 10px 24px rgba(47,123,246,.28);
   }
   .service-card-detail h3{font-size:1.1rem;font-weight:800;margin-bottom:14px;}
+
+  /* ===== SERVICE AREAS GRID ===== */
+  .service-areas-grid{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:28px;
+  }
+  .service-areas-grid .service-card-detail{
+    flex:1 1 280px;max-width:320px;
+  }
   .service-card-detail p{color:var(--gray);font-size:.9rem;line-height:1.7;}
 
   /* ===== PROCESS SECTION (Our Work) ===== */
@@ -512,13 +526,13 @@
 
   @media (max-width:960px){
     .features-grid{grid-template-columns:repeat(2,1fr);}
+    .features-grid.cols-3{grid-template-columns:repeat(2,1fr);max-width:none;}
     .about-grid{grid-template-columns:1fr;}
     .about-img{clip-path:none;min-height:320px;}
     .about-copy{padding:50px 24px;}
     .footer-grid{grid-template-columns:1fr 1fr;}
     .inspection-grid{grid-template-columns:1fr;gap:44px;}
     .reviews-page-grid{grid-template-columns:repeat(2,1fr);}
-    .services-page-grid{grid-template-columns:repeat(2,1fr);}
     .process-grid{grid-template-columns:1fr;}
     .yard-sign-grid{grid-template-columns:1fr;gap:32px;}
     .yard-sign-img{order:-1;}
@@ -537,13 +551,13 @@
     .hero h1{font-size:2.6rem;}
     .hero-badges{gap:16px;}
     .features-grid{grid-template-columns:1fr;}
+    .features-grid.cols-3{grid-template-columns:1fr;}
     .cta-inner{flex-direction:column;align-items:flex-start;}
     .footer-grid{grid-template-columns:1fr;}
     .inspection{padding:64px 0;}
     .inspection-form-card{padding:26px;}
     .form-row.two-col{grid-template-columns:1fr;}
     .reviews-page-grid{grid-template-columns:1fr;}
-    .services-page-grid{grid-template-columns:1fr;}
     .signs-grid{grid-template-columns:1fr;}
     .service-gallery-grid{grid-template-columns:1fr;}
     .service-hero-photo{height:260px;}
