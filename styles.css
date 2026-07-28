@@ -99,6 +99,13 @@
   .call-cta .call-number{font-weight:800;font-size:1rem;color:var(--ink);}
   .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;}
   .menu-toggle span{display:block;width:26px;height:3px;background:var(--ink);margin:5px 0;border-radius:2px;}
+  .mobile-social{display:none;align-items:center;gap:10px;}
+  .mobile-social a{
+    width:34px;height:34px;border-radius:50%;background:var(--off);
+    display:flex;align-items:center;justify-content:center;
+    transition:background .2s ease;
+  }
+  .mobile-social a:hover{background:var(--line);}
 
   /* ===== HERO ===== */
   .hero{
@@ -295,7 +302,8 @@
     nav.main-nav.open{display:block;}
     nav.main-nav ul{flex-direction:column;gap:18px;}
     .menu-toggle{display:block;}
-    .call-cta .call-label{display:none;}
+    .call-cta{display:none;}
+    .mobile-social{display:flex;}
     .hero{padding:60px 0 90px;text-align:left;}
     .hero .container{padding-left:24px;}
     .hero h1{font-size:2.6rem;}
