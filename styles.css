@@ -70,8 +70,9 @@
 
   /* ===== HEADER ===== */
   header{
-    background:var(--navy);
+    background:#fff;
     position:sticky;top:0;z-index:50;
+    box-shadow:0 2px 12px rgba(12,28,51,.08);
   }
   .nav-wrap{
     display:flex;align-items:center;justify-content:space-between;
@@ -83,21 +84,21 @@
   .logo-img{height:78px;width:auto;flex-shrink:0;object-fit:contain;}
   nav.main-nav ul{display:flex;gap:30px;}
   nav.main-nav a{
-    color:#fff;font-weight:600;font-size:.82rem;
+    color:var(--ink);font-weight:600;font-size:.82rem;
     letter-spacing:.04em;text-transform:uppercase;
     position:relative;padding-bottom:4px;
   }
   nav.main-nav a.active{color:var(--blue);}
-  nav.main-nav a:not(.active):hover{color:#9db8e6;}
-  .call-cta{display:flex;align-items:center;gap:12px;color:#fff;}
+  nav.main-nav a:not(.active):hover{color:var(--blue);}
+  .call-cta{display:flex;align-items:center;gap:12px;color:var(--ink);}
   .call-icon{
     width:40px;height:40px;border-radius:50%;background:var(--blue);
     display:flex;align-items:center;justify-content:center;flex-shrink:0;
   }
-  .call-cta .call-label{font-size:.7rem;color:#c3cde3;}
-  .call-cta .call-number{font-weight:800;font-size:1rem;}
+  .call-cta .call-label{font-size:.7rem;color:var(--gray);}
+  .call-cta .call-number{font-weight:800;font-size:1rem;color:var(--ink);}
   .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;}
-  .menu-toggle span{display:block;width:26px;height:3px;background:#fff;margin:5px 0;border-radius:2px;}
+  .menu-toggle span{display:block;width:26px;height:3px;background:var(--ink);margin:5px 0;border-radius:2px;}
 
   /* ===== HERO ===== */
   .hero{
@@ -286,7 +287,7 @@
     .inspection-grid{grid-template-columns:1fr;gap:44px;}
   }
   @media (max-width:760px){
-    nav.main-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);padding:20px 24px;}
+    nav.main-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:20px 24px;box-shadow:0 8px 20px rgba(12,28,51,.1);}
     nav.main-nav.open{display:block;}
     nav.main-nav ul{flex-direction:column;gap:18px;}
     .menu-toggle{display:block;}
