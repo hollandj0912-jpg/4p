@@ -1,0 +1,97 @@
+---
+nav_active: about
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | 4P Roofing LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+{% include header.html %}
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow" style="color:#5b9dff;">About 4P Roofing LLC</span>
+    <h1>Your Trusted, Local Burleson Roofer</h1>
+    <p>Founded in Burleson, TX in 2022, 4P Roofing has been helping homeowners with every roofing need ever since.</p>
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="story-section">
+  <div class="container">
+    <h2>Family Owned. Community Rooted.</h2>
+    <p>4P Roofing LLC is family owned and operated, and we reside right here in Burleson. Built on family values and backed by years of roofing experience, we treat every homeowner we work with like a neighbor — because most of the time, that's exactly what they are.</p>
+  </div>
+</section>
+
+<!-- ===== WHAT 4P MEANS ===== -->
+<section class="features">
+  <div class="container">
+    <div class="features-heading">
+      <span class="eyebrow">More Than a Name</span>
+      <h2 class="section-title">What 4P Really Means</h2>
+      <div class="rule"></div>
+      <p style="color:var(--gray);margin-top:16px;max-width:640px;margin-left:auto;margin-right:auto;">The 4P name means more to us than just roofing. It represents what matters most — and it guides every roof we install, every homeowner we serve, and every project we complete.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h4>People</h4>
+        <p>Every project starts and ends with the people we serve — our neighbors, right here in Burleson.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+        <h4>Precision</h4>
+        <p>No shortcuts. Every roof is installed with the same care and attention to detail, every single time.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>Protection</h4>
+        <p>Your home protects your family. We take that responsibility seriously on every single job.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg></div>
+        <h4>Pride</h4>
+        <p>We stand behind our work because our name is on it — and that means something to us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<section class="trust-strip">
+  <div class="container trust-strip-inner">
+    <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg> Inspections Always Free</span>
+    <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg> 5-Star Rated on Google</span>
+    <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg> Family Owned &amp; Operated</span>
+    <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg> Fully Insured</span>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div class="cta-left">
+      <span class="icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+      <div>
+        <h3>Ready to Experience the Difference?</h3>
+        <p>Your inspection is always free — no pressure, no obligation.</p>
+      </div>
+    </div>
+    <a href="index.html#inspection-form" class="btn btn-white">Schedule My Inspection →</a>
+  </div>
+</section>
+
+{% include footer.html %}
+
+{% include nav-script.html %}
+</body>
+</html>
