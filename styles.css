@@ -297,7 +297,7 @@
     .footer-grid{grid-template-columns:1fr 1fr;}
     .inspection-grid{grid-template-columns:1fr;gap:44px;}
   }
-  @media (max-width:760px){
+  @media (max-width:880px){
     nav.main-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:20px 24px;box-shadow:0 8px 20px rgba(12,28,51,.1);}
     nav.main-nav.open{display:block;}
     nav.main-nav ul{flex-direction:column;gap:18px;}
