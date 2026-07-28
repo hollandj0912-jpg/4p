@@ -9,39 +9,10 @@
       <ul>
         <li><a href="index.html"{% if page.nav_active == 'home' %} class="active"{% endif %}>Home</a></li>
         <li><a href="about.html"{% if page.nav_active == 'about' %} class="active"{% endif %}>About Us</a></li>
-        <li class="nav-dropdown">
-          <a href="services.html"{% if page.nav_active == 'services' %} class="active"{% endif %}>Services</a>
-          <button class="dropdown-toggle" aria-label="Show services menu" aria-expanded="false">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="roof-replacement.html">Roof Replacement</a></li>
-            <li><a href="roof-repair.html">Roof Repair</a></li>
-            <li><a href="metal-roofing.html">Metal Roofing</a></li>
-            <li><a href="flat-roofing.html">Flat Roofing</a></li>
-            <li><a href="commercial-roofing.html">Commercial Roofing</a></li>
-          </ul>
-        </li>
+        <li><a href="services.html"{% if page.nav_active == 'services' %} class="active"{% endif %}>Services</a></li>
         <li><a href="work.html"{% if page.nav_active == 'work' %} class="active"{% endif %}>Our Work</a></li>
         <li><a href="reviews.html"{% if page.nav_active == 'reviews' %} class="active"{% endif %}>Reviews</a></li>
-        <li class="nav-dropdown">
-          <a href="service-areas.html"{% if page.nav_active == 'service-areas' %} class="active"{% endif %}>Service Areas</a>
-          <button class="dropdown-toggle" aria-label="Show service areas menu" aria-expanded="false">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="burleson-roofing.html">Burleson</a></li>
-            <li><a href="joshua-roofing.html">Joshua</a></li>
-            <li><a href="crowley-roofing.html">Crowley</a></li>
-            <li><a href="cleburne-roofing.html">Cleburne</a></li>
-            <li><a href="godley-roofing.html">Godley</a></li>
-            <li><a href="alvarado-roofing.html">Alvarado</a></li>
-            <li><a href="mansfield-roofing.html">Mansfield</a></li>
-            <li><a href="arlington-roofing.html">Arlington</a></li>
-            <li><a href="granbury-roofing.html">Granbury</a></li>
-            <li><a href="fort-worth-roofing.html">Fort Worth</a></li>
-          </ul>
-        </li>
+        <li><a href="service-areas.html"{% if page.nav_active == 'service-areas' %} class="active"{% endif %}>Service Areas</a></li>
         <li><a href="{% if page.nav_active == 'home' %}#inspection-form{% else %}index.html#inspection-form{% endif %}">Contact</a></li>
       </ul>
     </nav>
