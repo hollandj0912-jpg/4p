@@ -76,7 +76,7 @@
   }
   .nav-wrap{
     display:flex;align-items:center;justify-content:space-between;
-    padding:14px 32px;
+    padding:14px 24px;max-width:1180px;margin:0 auto;
   }
   .logo{
     display:flex;align-items:center;gap:12px;
@@ -143,7 +143,7 @@
     transition:background .2s ease;
   }
   .mobile-social a:hover{background:var(--line);}
-  .mobile-actions{display:flex;align-items:center;gap:14px;}
+  .mobile-actions{display:none;align-items:center;gap:14px;}
 
   /* ===== HERO ===== */
   .hero{
@@ -394,6 +394,7 @@
     .menu-toggle{display:block;}
     .header-right{display:none;}
     .mobile-social{display:flex;}
+    .mobile-actions{display:flex;}
     .hero{padding:60px 0 90px;text-align:left;}
     .hero .container{padding-left:24px;}
     .hero h1{font-size:2.6rem;}
