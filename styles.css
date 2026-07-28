@@ -73,9 +73,6 @@
     display:flex;align-items:center;gap:12px;
     background:#fff;padding:8px 16px;border-radius:6px;
   }
-  .logo-text{line-height:1.1;}
-  .logo-text .name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.05rem;color:var(--navy);}
-  .logo-text .tag{font-size:.62rem;letter-spacing:.06em;color:var(--gray);text-transform:uppercase;}
   .logo-img{height:38px;width:auto;flex-shrink:0;object-fit:contain;}
   nav.main-nav ul{display:flex;gap:30px;}
   nav.main-nav a{
@@ -132,33 +129,6 @@
   }
   .feature p{color:var(--gray);font-size:.86rem;}
 
-  /* ===== SERVICES ===== */
-  .services{background:var(--navy);color:#fff;padding:80px 0;}
-  .services .heading{text-align:center;max-width:640px;margin:0 auto 46px;}
-  .services h2{color:#fff;}
-  .services .heading p{color:#a8b4cc;margin-top:16px;font-size:.95rem;}
-  .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
-  .service-card{
-    background:#fff;border-radius:8px;overflow:hidden;color:var(--ink);
-    display:flex;flex-direction:column;
-  }
-  .service-card .img{
-    position:relative;height:150px;overflow:hidden;
-  }
-  .service-card .img img{width:100%;height:100%;object-fit:cover;}
-  .service-icon{
-    position:absolute;bottom:-22px;left:20px;
-    width:44px;height:44px;border-radius:50%;background:var(--blue);
-    display:flex;align-items:center;justify-content:center;color:#fff;
-    border:4px solid #fff;
-  }
-  .service-body{padding:34px 20px 24px;}
-  .service-body h4{font-size:.95rem;font-weight:800;letter-spacing:.02em;text-transform:uppercase;margin-bottom:10px;}
-  .service-body p{color:var(--gray);font-size:.84rem;margin-bottom:16px;}
-  .service-body .learn{
-    color:var(--blue);font-weight:700;font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;
-  }
-
   /* ===== ABOUT ===== */
   .about{padding:0;}
   .about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}
@@ -177,33 +147,6 @@
     display:flex;align-items:center;gap:26px;flex-wrap:wrap;
   }
   .signature .script{font-family:'Segoe Script','Brush Script MT',cursive;font-size:1.3rem;color:#333;}
-
-  /* ===== GALLERY ===== */
-  .gallery{background:var(--off);padding:80px 0;}
-  .gallery .heading{text-align:center;margin-bottom:40px;}
-  .gallery-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:36px;
-  }
-  .gallery-grid img{
-    width:100%;height:180px;object-fit:cover;border-radius:6px;
-    transition:transform .3s ease;
-  }
-  .gallery-grid a{overflow:hidden;border-radius:6px;display:block;}
-  .gallery-grid a:hover img{transform:scale(1.06);}
-  .gallery-cta{text-align:center;}
-
-  /* ===== REVIEWS ===== */
-  .reviews{background:var(--navy-2);color:#fff;padding:80px 0;}
-  .reviews .heading{text-align:center;margin-bottom:44px;}
-  .reviews h2{color:#fff;}
-  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  .review-card{
-    background:#111f3b;border-radius:8px;padding:30px 26px;
-  }
-  .review-card .quote-mark{color:var(--blue);font-size:2.2rem;font-family:Georgia,serif;line-height:1;margin-bottom:8px;}
-  .review-card p{color:#c3cde3;font-size:.9rem;margin-bottom:20px;}
-  .review-author{font-weight:700;font-size:.85rem;margin-bottom:6px;}
-  .stars{color:var(--star);font-size:.85rem;letter-spacing:2px;}
 
   /* ===== CTA BANNER ===== */
   .cta-banner{
@@ -252,12 +195,9 @@
 
   @media (max-width:960px){
     .features-grid{grid-template-columns:repeat(2,1fr);}
-    .services-grid{grid-template-columns:repeat(2,1fr);}
     .about-grid{grid-template-columns:1fr;}
     .about-img{clip-path:none;min-height:320px;}
     .about-copy{padding:50px 24px;}
-    .gallery-grid{grid-template-columns:repeat(2,1fr);}
-    .reviews-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr 1fr;}
   }
   @media (max-width:760px){
@@ -269,8 +209,6 @@
     .hero{padding:60px 0 90px;text-align:left;}
     .hero h1{font-size:2.2rem;}
     .features-grid{grid-template-columns:1fr;}
-    .services-grid{grid-template-columns:1fr;}
-    .gallery-grid{grid-template-columns:1fr 1fr;}
     .cta-inner{flex-direction:column;align-items:flex-start;}
     .footer-grid{grid-template-columns:1fr;}
   }
