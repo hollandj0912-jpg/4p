@@ -7,23 +7,4 @@
   document.querySelectorAll('.main-nav a').forEach(link => {
     link.addEventListener('click', () => mainNav.classList.remove('open'));
   });
-
-  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const parent = toggle.closest('.nav-dropdown');
-      const isOpen = parent.classList.contains('dropdown-open');
-
-      document.querySelectorAll('.nav-dropdown.dropdown-open').forEach(open => {
-        if (open !== parent) {
-          open.classList.remove('dropdown-open');
-          open.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      parent.classList.toggle('dropdown-open', !isOpen);
-      toggle.setAttribute('aria-expanded', String(!isOpen));
-    });
-  });
 </script>
