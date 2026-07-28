@@ -9,22 +9,59 @@
       <ul>
         <li><a href="index.html"{% if page.nav_active == 'home' %} class="active"{% endif %}>Home</a></li>
         <li><a href="about.html"{% if page.nav_active == 'about' %} class="active"{% endif %}>About Us</a></li>
-        <li><a href="services.html"{% if page.nav_active == 'services' %} class="active"{% endif %}>Services</a></li>
+        <li class="nav-dropdown">
+          <a href="services.html"{% if page.nav_active == 'services' %} class="active"{% endif %}>Services</a>
+          <button class="dropdown-toggle" aria-label="Show services menu" aria-expanded="false">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="roof-replacement.html">Roof Replacement</a></li>
+            <li><a href="roof-repair.html">Roof Repair</a></li>
+            <li><a href="metal-roofing.html">Metal Roofing</a></li>
+            <li><a href="flat-roofing.html">Flat Roofing</a></li>
+            <li><a href="commercial-roofing.html">Commercial Roofing</a></li>
+          </ul>
+        </li>
         <li><a href="work.html"{% if page.nav_active == 'work' %} class="active"{% endif %}>Our Work</a></li>
         <li><a href="reviews.html"{% if page.nav_active == 'reviews' %} class="active"{% endif %}>Reviews</a></li>
+        <li class="nav-dropdown">
+          <a href="service-areas.html"{% if page.nav_active == 'service-areas' %} class="active"{% endif %}>Service Areas</a>
+          <button class="dropdown-toggle" aria-label="Show service areas menu" aria-expanded="false">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="burleson-roofing.html">Burleson</a></li>
+            <li><a href="joshua-roofing.html">Joshua</a></li>
+            <li><a href="crowley-roofing.html">Crowley</a></li>
+            <li><a href="cleburne-roofing.html">Cleburne</a></li>
+            <li><a href="godley-roofing.html">Godley</a></li>
+            <li><a href="alvarado-roofing.html">Alvarado</a></li>
+            <li><a href="mansfield-roofing.html">Mansfield</a></li>
+            <li><a href="arlington-roofing.html">Arlington</a></li>
+            <li><a href="granbury-roofing.html">Granbury</a></li>
+            <li><a href="fort-worth-roofing.html">Fort Worth</a></li>
+          </ul>
+        </li>
         <li><a href="{% if page.nav_active == 'home' %}#inspection-form{% else %}index.html#inspection-form{% endif %}">Contact</a></li>
       </ul>
     </nav>
 
-    <a href="tel:8177131407" class="call-cta">
-      <span class="call-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" fill="#fff"/></svg>
-      </span>
-      <span>
-        <span class="call-label" style="display:block;">Call Us Today!</span>
-        <span class="call-number">(817) 713-1407</span>
-      </span>
-    </a>
+    <div class="header-right">
+      <div class="desktop-social">
+        <a href="https://www.facebook.com/profile.php?id=61587282530883" target="_blank" rel="noopener" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="#0c1c33"><path d="M22 12a10 10 0 1 0-11.5 9.87v-6.98H7.9V12h2.6V9.8c0-2.57 1.53-4 3.87-4 1.12 0 2.3.2 2.3.2v2.53h-1.3c-1.28 0-1.68.8-1.68 1.62V12h2.86l-.46 2.89h-2.4v6.98A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="https://share.google/i2JklaTTuhL9mK41X" target="_blank" rel="noopener" aria-label="Google"><svg width="15" height="15" viewBox="0 0 488 512" fill="#0c1c33"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg></a>
+      </div>
+
+      <a href="tel:8177131407" class="call-cta">
+        <span class="call-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" fill="#fff"/></svg>
+        </span>
+        <span>
+          <span class="call-label" style="display:block;">Call Us Today!</span>
+          <span class="call-number">(817) 713-1407</span>
+        </span>
+      </a>
+    </div>
 
     <div class="mobile-actions">
       <div class="mobile-social">
