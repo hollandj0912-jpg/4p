@@ -102,41 +102,46 @@ nav_active: home
       </ul>
     </div>
 
-    <form class="inspection-form-card" id="inspectionForm">
+    <form class="inspection-form-card" id="inspectionForm" action="https://formsubmit.co/tyler@4proofingllc.com" method="POST">
+      <!-- FormSubmit configuration -->
+      <input type="hidden" name="_subject" value="New inspection request from 4proofingllc.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://4proofingllc.com/thanks.html">
+
       <div class="form-row">
         <div class="form-field">
           <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" name="fullName" required>
+          <input type="text" id="fullName" name="Full Name" required>
         </div>
       </div>
       <div class="form-row two-col">
         <div class="form-field">
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required>
+          <input type="tel" id="phone" name="Phone Number" required>
         </div>
         <div class="form-field">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="Email" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-field">
           <label for="address">Property Address</label>
-          <input type="text" id="address" name="address" required>
+          <input type="text" id="address" name="Property Address" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-field">
           <label for="message">Tell us about your roof (optional)</label>
-          <textarea id="message" name="message" rows="3"></textarea>
+          <textarea id="message" name="Message" rows="3"></textarea>
         </div>
       </div>
       <label class="consent">
-        <input type="checkbox" id="smsConsent" name="smsConsent" required>
+        <input type="checkbox" id="smsConsent" name="SMS Consent" required>
         <span>I agree to receive calls and text messages from 4P Roofing LLC about my inspection request. Message and data rates may apply. Message frequency varies. Reply STOP to opt out at any time.</span>
       </label>
       <button type="submit" class="btn btn-primary btn-glow btn-block" id="formSubmitBtn">Schedule My Free Inspection</button>
-      <p class="form-status" id="formStatus"></p>
     </form>
   </div>
 </section>
@@ -145,53 +150,5 @@ nav_active: home
 
 {% include nav-script.html %}
 
-<script>
-  // ===== INSPECTION FORM SUBMISSION =====
-  // TODO: replace with this client's actual GHL inbound webhook URL
-  const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/REPLACE_WITH_LOCATION_ID/webhook-trigger/REPLACE_WITH_TRIGGER_ID";
-
-  const inspectionForm = document.getElementById('inspectionForm');
-  const formStatus = document.getElementById('formStatus');
-  const formSubmitBtn = document.getElementById('formSubmitBtn');
-
-  inspectionForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const payload = {
-      fullName: document.getElementById('fullName').value.trim(),
-      phone: document.getElementById('phone').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      address: document.getElementById('address').value.trim(),
-      message: document.getElementById('message').value.trim(),
-      smsConsent: document.getElementById('smsConsent').checked,
-      source: "4proofingllc.com - Schedule My Inspection form"
-    };
-
-    formSubmitBtn.disabled = true;
-    formSubmitBtn.textContent = "Submitting...";
-    formStatus.textContent = "";
-    formStatus.className = "form-status";
-
-    try {
-      const response = await fetch(GHL_WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) throw new Error("Submission failed");
-
-      formStatus.textContent = "Thanks! We'll be in touch shortly to confirm your inspection.";
-      formStatus.classList.add("success");
-      inspectionForm.reset();
-    } catch (err) {
-      formStatus.textContent = "Something went wrong. Please call us at (817) 713-1407 instead.";
-      formStatus.classList.add("error");
-    } finally {
-      formSubmitBtn.disabled = false;
-      formSubmitBtn.textContent = "Schedule My Free Inspection";
-    }
-  });
-</script>
 </body>
 </html>
